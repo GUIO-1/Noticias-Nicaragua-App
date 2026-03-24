@@ -12,10 +12,14 @@ else:
 # Configuración de la interfaz
 st.set_page_config(page_title="Noticias y Mapa Nicaragua", layout="wide")
 st.title("🇳🇮 Noticias y Ubicación de Nicaragua")
-
+st.title("🇳🇮 Noticias y Ubicación de Nicaragua")
+st.markdown("""
+    **Desarrollado por:** Yimi Josue Guido Aragón  
+    *Estudiante de Ingeniería en Sistemas - UNHSJM* Esta aplicación utiliza la API de NewsAPI para filtrar noticias locales y mostrarlas de forma interactiva.
+""")
 # 1. Configuración en la barra lateral
 st.sidebar.header("Configuración")
-api_key = st.sidebar.text_input("NewsAPI Key:", type="password")
+
 
 # 2. Lógica principal
 if st.sidebar.button("Actualizar Datos"):
