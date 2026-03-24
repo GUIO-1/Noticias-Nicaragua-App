@@ -12,7 +12,7 @@ if "NEWS_API_KEY" in st.secrets:
 else:
     # Si no hay Secrets (por ejemplo, si corres el código en tu PC), la pide en la barra lateral
     api_key = st.sidebar.text_input("Introduce tu NewsAPI Key:", type="password")
-    
+
 # Configuración de la interfaz
 st.set_page_config(page_title="Noticias y Mapa Nicaragua", layout="wide")
 
@@ -21,8 +21,7 @@ st.markdown("""
     **Desarrollado por:** Yimi Josue Guido Aragón  
     *Estudiante de Ingeniería en Sistemas - UNHSJM* Esta aplicación utiliza la API de NewsAPI para filtrar noticias locales y mostrarlas de forma interactiva.
 """)
-# 1. Configuración en la barra lateral
-st.sidebar.header("Configuración")
+
 
 
 # 2. Lógica principal
