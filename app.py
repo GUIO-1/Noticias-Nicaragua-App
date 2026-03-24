@@ -1,6 +1,9 @@
 import streamlit as st
 import requests
 import pandas as pd
+# Insertar en la barra lateral un logo o imagen descriptiva
+st.sidebar.image("https://cdn-icons-png.flaticon.com/512/2991/2991167.png", width=100)
+st.sidebar.title("Menú de Navegación")
 
 # --- MANEJO SEGURO DE LA API KEY ---
 # Primero intentamos sacar la clave de los Secrets (para tus invitados)
@@ -9,6 +12,7 @@ if "NEWS_API_KEY" in st.secrets:
 else:
     # Si no hay Secrets (por ejemplo, si corres el código en tu PC), la pide en la barra lateral
     api_key = st.sidebar.text_input("Introduce tu NewsAPI Key:", type="password")
+    
 # Configuración de la interfaz
 st.set_page_config(page_title="Noticias y Mapa Nicaragua", layout="wide")
 
