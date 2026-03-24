@@ -2,6 +2,13 @@ import streamlit as st
 import requests
 import pandas as pd
 
+# --- MANEJO SEGURO DE LA API KEY ---
+# Primero intentamos sacar la clave de los Secrets (para tus invitados)
+if "NEWS_API_KEY" in st.secrets:
+    api_key = st.secrets["NEWS_API_KEY"]
+else:
+    # Si no hay Secrets (por ejemplo, si corres el código en tu PC), la pide en la barra lateral
+    api_key = st.sidebar.text_input("Introduce tu NewsAPI Key:", type="password")
 # Configuración de la interfaz
 st.set_page_config(page_title="Noticias y Mapa Nicaragua", layout="wide")
 st.title("🇳🇮 Noticias y Ubicación de Nicaragua")
